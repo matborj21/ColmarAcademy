@@ -1,0 +1,15 @@
+{
+  "name": "ColmarAcademy",
+  "version": "1.0.0",
+  "description": "the capstone project from codecademy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "codecademy",
+    "capstone project"
+  ],
+  "author": "Mathew Borje",
+  "license": "ISC"
+}
