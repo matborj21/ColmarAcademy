@@ -16,7 +16,7 @@ a {
 html {
     box-sizing: border-box;
     background-color: var(--mainColor);
-
+    
     font-family: 'Roboto', 'Open Sans', 'Manrope', sans-serif;
 }
 
@@ -56,6 +56,7 @@ li {
     color: var(--mainColor);
     border-radius: 2px;
     font-size: 1.2em;
+    /* padding: 10px 20px; */
 }
 .qoutes {
     font-style: italic;
@@ -71,7 +72,54 @@ h3{
     font-size: 1.1em;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
 /* fonts */
 
 
 /* mobile styles */
+.site-nav {
+    height: 50px;
+}
+.site-nav h1, .site-nav li{
+    display: none;
+}
+
+.site-nav ul{
+   grid-column: 2/8;
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+}
+
+#welcome-banner .welcome-img{
+    grid-column: 1 / 9;
+}
+#welcome-banner .welcome-text{
+    grid-column: 1 / 9;
+    grid-row: 2;
+    align-self: center;
+}
+
+.welcome-text h2{
+    font-size: 3rem;
+    padding: 32px 15px
+}
+.welcome-text .leading {
+    font-size: 2em;
+    padding: 0 15px 32px 15px;
+}
+
+.welcome-text a{
+    display: block;
+    padding: 15px 40px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+#welcome-banner img {
+    display: block;
+    width: 100%;
+}
