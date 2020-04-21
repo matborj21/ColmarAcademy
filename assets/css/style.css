@@ -384,6 +384,14 @@ footer ul {
     grid-row: 2;
     padding: 2em;
     }
+    #exhibit .exibit-main h3, 
+    #exhibit .exibit-main p {
+        display: block;
+    }
+    #exhibit .exibit-main h3{
+        font-size: 3em;
+        margin: 1em auto;
+    }
     #exhibit .information-aside{
         grid-column: 6/9;
         grid-row: 2;
