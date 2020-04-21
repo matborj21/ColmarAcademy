@@ -213,7 +213,10 @@ h3{
     font-size: 2.5em;
     margin-bottom: 1em;
 }
-
+#exhibit .exibit-main {
+    grid-column: 1/9;
+    grid-row: 2;
+}
 footer {
     display: flex;
     justify-content: space-between;
@@ -306,7 +309,8 @@ footer ul {
         
     }
 
-    #information .information-aside .information-side-box {
+    .information-aside .information-side-box
+     {
         display: inline-flex;
         margin: 1em auto;
     }
@@ -318,15 +322,15 @@ footer ul {
         align-self: center;
     }
 
-    #information .information-side-box .information-side-body {
+     .information-side-box .information-side-body {
         display: block;
         margin-left: 1.5em;
     }
     
-    #information .information-side-box .information-side-body h3{
+     .information-side-box .information-side-body h3{
         font-size: 1.3em;
     }
-    #information .information-side-box .information-side-body p{
+     .information-side-box .information-side-body p{
         font-size: 1em;
     }
     #courses {
@@ -335,7 +339,8 @@ footer ul {
         margin: 2em 5em;
         justify-content: center;
     }
-    #courses h2{
+    #courses h2,
+    #exhibit h2{
         display: block;
         width: 100%;
         text-align: center;
@@ -364,5 +369,60 @@ footer ul {
         margin: 1.5em;
     }
 
+    #exhibit h3,
+    #exhibit p,
+    #exhibit .information-aside {
+        display: contents;
+    }
+
+    /* #exhibit {
+        display: flex;
+        flex-direction: column;
+    } */
+    #exhibit .exibit-main {
+    grid-column: 1/6;
+    grid-row: 2;
+    padding: 2em;
+    }
+    #exhibit .information-aside{
+        grid-column: 6/9;
+        grid-row: 2;
+    }
+    #exhibit .information-aside {
+        display: flex;
+        flex-direction: column;
+    }
+    #exhibit .information-aside .information-side-box  {
+        margin: 2em;
+    }
+
+    
+    #exhibit .information-aside .information-side-box p {
+        display: block;
+        margin-top: 1em;
+    }
+
+    #exhibit .information-aside .information-side-box img {
+        display: block;
+        width:30%;
+        align-self: center;
+    }
+
+    footer ul{
+        
+        display: contents;
+    }
+    footer li:nth-child(1) {
+        margin-left: auto;
+    }
+    footer li {
+        margin-left: 1em;
+    }
+    footer{
+        justify-content: flex-end;
+    }
+    footer p {
+        align-items: flex-start;
+    }
 
 }
