@@ -46,6 +46,10 @@ span{
     color: var(--bgcolor);
 }
 
+nav{
+    border-bottom: 3px solid var(--textcolor);
+}
+
 li {
     font-family: 'Manrope';
 }
@@ -56,7 +60,7 @@ li {
     color: var(--mainColor);
     border-radius: 2px;
     font-size: 1.2em;
-    /* padding: 10px 20px; */
+    padding: 10px 40px;
 }
 .qoutes {
     font-style: italic;
@@ -89,12 +93,15 @@ h3{
 }
 
 .site-nav ul{
-   grid-column: 2/8;
-   display: flex;
-   justify-content: space-between;
-   align-self: center;
+    grid-column: 2/8;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
 }
-
+#welcome-banner {
+    background-color: rgba(222, 242, 243, 0.7)
+    
+}
 #welcome-banner .welcome-img{
     grid-column: 1 / 9;
 }
@@ -102,24 +109,260 @@ h3{
     grid-column: 1 / 9;
     grid-row: 2;
     align-self: center;
+    margin: 0 20px;
 }
 
 .welcome-text h2{
     font-size: 3rem;
-    padding: 32px 15px
+    padding: 32px 0;
 }
 .welcome-text .leading {
     font-size: 2em;
-    padding: 0 15px 32px 15px;
+    padding-bottom: 32px;
+    color:rgb(156, 182, 206);
 }
 
 .welcome-text a{
     display: block;
-    padding: 15px 40px;
     font-family: 'Roboto';
     font-weight: 500;
+    margin-bottom: 32px;
 }
 #welcome-banner img {
     display: block;
     width: 100%;
+}
+
+#information .information-main {
+    display: none;
+} 
+
+#information .pc-img {
+        display: none;
+}
+
+#information .information-aside .information-side-box{
+    grid-column: 1 / span 9;
+    height: 100%;
+    
+}
+
+#information .information-aside {
+    margin: 16px;
+    
+}
+
+#information .information-side-body {
+    margin-top: 2em;
+    margin-bottom: 64px;
+}
+#information .information-side-body h3 {
+    font-size: 2em;
+    padding-left: 1em;
+}
+#information .information-side-body h3, 
+#information .information-side-body p, 
+#information .information-side-body a {
+    margin-bottom: 1em;
+}
+
+#information img {
+    display: block;
+    width: 100%;
+
+}
+#courses h2 {
+    grid-column: 2/8;
+    font-size: 2.5em;
+    font-family: 'Open sans';
+    text-align: center;
+    margin-bottom: 1em;
+}
+#courses {
+    margin-bottom: 2em;
+}
+#courses .card{
+    margin: 0 0.8em;
+    background-color: rgba(222, 242, 243, 0.7);
+    grid-column: 1/9;
+    margin-bottom: .9em;
+}
+#courses .card .card-title{
+    font-size: 1.5em;
+    padding: 1.5em;
+}
+#courses .card p {
+    visibility: hidden;
+}
+#courses .card img, 
+#courses .card h5 {
+    display: none;
+}
+
+#exhibit h3,
+#exhibit p,
+#exhibit .information-aside {
+    display: none;
+}
+#exhibit {
+    margin-bottom: 2em; 
+}
+#exhibit h2 {
+    grid-column: 1/9;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+footer ul {
+    display: none;
+}
+
+
+/* desktop styles */
+@media screen and (min-width: 760px){
+    .contianer {
+        margin: 0 auto;
+    }
+
+    .site-nav h1, .site-nav li{
+        display: block;
+    }
+    .site-nav h1 {
+        grid-column: 1/3;
+    }
+    .site-nav ul {
+        grid-column: 5/9;
+        justify-content: flex-end;
+        margin-right: 10px; 
+    }
+    .site-nav li {
+        margin-left: 1em;
+    }
+    .site-nav .icon {
+        display: none;
+    }
+
+    .site-nav h1 {
+        margin-left: 10px;
+        align-self: center;
+    }
+
+    #welcom-banner{
+        align-content: center;
+    }
+    #welcome-banner .welcome-img{
+        grid-column: 1 / 5;
+        margin: 1.5em;
+        
+    }
+    #welcome-banner .welcome-text{
+        grid-column: 5 / 8;
+        grid-row: 1;
+        padding: 1.5em;
+    }
+    #welcome-banner .welcome-text a{
+        margin-bottom: 0;
+    }
+    #welcome-banner .welcome-text h2 {
+        font-size: 2.2em;
+    }
+    #welcome-banner .welcome-text .leading {
+        font-size: 1.2em;
+    }
+    #information {
+        display: flex;
+    }
+    #information .mobile-img {
+        display: none;
+    }
+    #information .information-main {
+        display: flex;
+        flex-direction: column;
+    }
+    #information .information-main img, 
+    #information .information-main p{
+        width: 90%;
+        margin: 2em 1.5em;
+    }
+    #information .information-main h2 {
+        font-size: 2.5em;
+        margin-left: .5em;
+    }
+    #information .information-main h2::first-letter {
+        text-transform: capitalize;
+    }
+
+    #information .information-aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    #information .information-aside .information-side-box {
+        display: inline-flex;
+        margin: 1em auto;
+    }
+    
+
+    #information .information-side-box .pc-img {
+        display: block;
+        width: 35%;
+        align-self: center;
+    }
+
+    #information .information-side-box .information-side-body {
+        display: block;
+        margin-left: 1.5em;
+    }
+    
+    #information .information-side-box .information-side-body h3{
+        font-size: 1.3em;
+    }
+    #information .information-side-box .information-side-body p{
+        font-size: 1em;
+    }
+    #courses {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2em 5em;
+        justify-content: center;
+    }
+    #courses h2{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #courses .card{
+        max-width: 30%;
+        
+    }
+
+    #courses .card img, 
+    #courses .card h5 {
+        display: block;
+    }
+    #courses .card img{
+        width: 100%;
+        height: 50%;
+    }
+    
+    #courses .card p{
+        visibility: visible;
+        padding-bottom: 2em;
+    }
+    #courses .card p,
+    #courses .card h5 {
+        display: block;
+        margin: 1.5em;
+    }
+
+
 }
